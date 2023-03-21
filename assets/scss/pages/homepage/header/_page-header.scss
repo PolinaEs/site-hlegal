@@ -1,0 +1,126 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.page-header {
+  position: relative;
+  background: $gradient-soft;
+
+  &::before {
+    @include sm-min {
+      @include abs-position();
+      content: "";
+      background-position: 50% 100%;
+      background-size: 100vh;
+      background-image: url(../img/pattern.svg);
+      background-repeat: no-repeat;
+    }
+  }
+
+  &::after {
+    z-index: 1;
+    @include abs-position(70%);
+    content: "";
+    background: $gradient-overlay;
+  }
+
+  &__container {
+    @extend %container;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: $gap;
+
+    @include md {
+      grid-template-areas: "actions actions" "logo logo" "menu menu";
+      justify-items: center;
+      padding-top: 30px;
+    }
+
+    @include xl-min {
+      grid-template-areas: "logo actions" "logo menu";
+      padding-top: 50px;
+    }
+
+    @include xl {
+      grid-template-areas: "logo actions" "logo menu";
+      padding-top: 50px;
+    }
+
+    @include sm {
+      grid-template-areas: "actions actions" "logo menu";
+      padding-top: $gap;
+      justify-items: stretch;
+      padding-top: 50px;
+    }
+  }
+
+  &__logo {
+    grid-area: logo;
+
+    &-img {
+      @include sm {
+        width: 76px;
+      }
+    }
+  }
+
+  &__menu {
+    grid-area: menu;
+  }
+
+  &__actions {
+    grid-area: actions;
+
+    @include md {
+      gap: 20px
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    &-title {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      max-width: 600px;
+      padding: $gap;
+      transform: translate(-50%, -50%);
+      font-weight: 500;
+      line-height: 45px;
+      font-size: 38px;
+      text-align: center;
+      color: $color-white;
+    }
+
+    &-image {
+      transform: translateY(30%);
+      height: 100vh;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    z-index: 2;
+    bottom: $gap;
+    left: 50%;
+    cursor: pointer;
+    transform: translateX(-50%);
+  }
+
+  &__button:hover {
+    opacity: 0.4;
+  }
+
+}

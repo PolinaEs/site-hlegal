@@ -1,0 +1,30 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.visually-hidden {
+  @include visually-hidden;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 6px;
+  background-color: $color-separator;
+
+  @include md {
+    display: none;
+  }
+}
+
+.hide {
+  @include xs {
+    display: none;
+  }
+}
+
+
+.line {
+  width: 100%;
+  height: 4px;
+  background-color: $color-separator;
+}

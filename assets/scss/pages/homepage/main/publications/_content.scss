@@ -1,0 +1,85 @@
+@use "../../../../presets" as *;
+@use "../../../../mixins" as *;
+
+.content {
+
+  &__header {
+
+
+    @include xs {
+      padding-bottom: 20px;
+    }
+
+    &-link {
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: $color-active;
+    }
+
+    &-link:hover {
+      opacity: 0.4;
+    }
+
+    &-title {
+      @extend %text-liner-gradient;
+
+      font-weight: 700;
+      font-size: 42px;
+      margin-top: 4px;
+
+      @include xs {
+        font-size: 32px;
+        margin-bottom: 0;
+        margin-top: 2px;
+      }
+    }
+  }
+
+  &__blocks {
+    column-count: 3;
+    column-gap: 40px;
+
+    column-width: auto;
+
+
+    @include md {
+      column-count: 2;
+    }
+
+    @include xs {
+      column-count: 1;
+      display: flex;
+      flex-direction: column-reverse;
+      margin-bottom: 8px;
+    }
+
+
+  }
+
+  &__btn {
+    position: absolute;
+    z-index: 2;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    &-blue {
+      background: $color-active;
+      box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
+      border-radius: 12px;
+      border: none;
+      color: $color-white;
+      font-weight: 700;
+      font-size: 14px;
+      text-align: center;
+      padding: 16px 16px;
+      width: 250px;
+    }
+
+    &-blue:hover {
+      background: $color-active-hover;
+    }
+  }
+}

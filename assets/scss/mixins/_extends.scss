@@ -1,0 +1,24 @@
+@use "../presets" as *;
+
+%container {
+  width: min(100% - $gap-xl, $container-width);
+  margin-inline: auto;
+}
+
+%text-liner-gradient-reversed {
+  background: $gradient-red-text-reversed;
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+%text-liner-gradient {
+  background: $gradient-red-text;
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+}

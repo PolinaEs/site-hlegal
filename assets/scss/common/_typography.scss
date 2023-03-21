@@ -1,0 +1,35 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: $font-size;
+  font-family: $font-primary;
+}
+
+body {
+  font-family: $font-primary;
+  font-size: $font-size;
+  overflow-wrap: break-word;
+
+  overflow-x: hidden;
+  // width: 1440px;
+}
+
+a {
+  text-decoration: none;
+  color: $color-active;
+}
+
+address {
+  font-style: normal;
+}
+
+h4 {
+  margin: 0;
+}

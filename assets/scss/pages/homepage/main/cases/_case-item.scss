@@ -1,0 +1,223 @@
+@use "../../../../presets" as *;
+@use "../../../../mixins" as *;
+
+.case-item {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-radius: 12px;
+  overflow-wrap: anywhere;
+
+  &__one {
+    // max-width: 431px;
+    // 
+    width: 32.80303%;
+    min-height: 255px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid $color-white;
+    border-right: 1px solid $color-white;
+    justify-content: flex-end;
+
+    @include lg {
+      width: 50%;
+    }
+
+    @include sm {
+      width: 100%;
+    }
+
+    @include xs {
+      min-height: 140px;
+    }
+
+    &-title {
+      background-color: $color-bg;
+      width: 100%;
+      border-bottom: 1px solid $color-white;
+      padding: 20px;
+    }
+
+
+
+    &-link {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 1.2;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: $color-accent;
+      background-color: $color-bg;
+      cursor: pointer;
+
+      &:hover {
+        color: $color-active;
+      }
+    }
+  }
+
+  &__two {
+    background-color: $color-bg;
+    width: 34.39394%;
+    min-height: 255px;
+    border-bottom: 1px solid $color-white;
+    border-right: 1px solid $color-white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    @include lg {
+      width: 50%;
+    }
+
+    @include sm {
+      width: 100%;
+    }
+
+
+    @include xs {
+      min-height: 140px;
+    }
+  }
+
+
+  &__three {
+    background-color: $color-bg;
+    width: 31.8030%;
+    min-height: 255px;
+    border-right: 1px solid $color-white;
+    border-bottom: 1px solid $color-white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    @include lg {
+      width: 50%;
+    }
+
+    @include sm {
+      width: 100%;
+    }
+
+
+    @include xs {
+      min-height: 140px;
+    }
+
+  }
+
+
+  &__four {
+    width: 24.24242%;
+    min-height: 198px;
+    border-bottom: 1px solid $color-white;
+    border-right: 1px solid $color-white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    @include lg {
+      width: 50%;
+    }
+
+    @include sm {
+      width: 100%;
+    }
+
+
+    @include xs {
+      min-height: 140px;
+    }
+  }
+
+  &__five {
+    width: 34.31818%;
+    min-height: 198px;
+    border-bottom: 1px solid $color-white;
+    border-right: 1px solid $color-white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    @include lg {
+      width: 50%;
+    }
+
+    @include sm {
+      width: 100%;
+    }
+
+
+    @include xs {
+      min-height: 140px;
+    }
+  }
+
+  &__six {
+    width: 40.43939%;
+    min-height: 198px;
+    border-bottom: 1px solid $color-white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    @include lg {
+      width: 50%;
+    }
+
+    @include sm {
+      width: 100%;
+    }
+
+
+    @include xs {
+      min-height: 140px;
+    }
+  }
+
+  &__content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-end;
+    background-color: $color-bg;
+
+    :hover {
+      color: $color-accent;
+    }
+
+    @include sm {
+      justify-content: center;
+    }
+
+    &-header {
+      font-weight: 500;
+
+      font-size: 24px;
+      line-height: 28px;
+      color: $color-main-soft;
+      margin: 0;
+
+      @include xs {
+        font-size: 18px;
+        line-height: 21px;
+      }
+
+    }
+
+    &-company {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 1.44;
+      color: $color-text;
+      margin-top: 20px;
+
+
+      @include xs {
+        margin-top: 10px;
+        margin-bottom: 0;
+      }
+    }
+  }
+}

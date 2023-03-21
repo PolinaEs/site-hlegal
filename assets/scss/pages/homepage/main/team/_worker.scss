@@ -1,0 +1,213 @@
+@use "../../../../presets" as *;
+@use "../../../../mixins" as *;
+
+.worker {
+  display: flex;
+  background-color: $color-bg;
+  border-radius: 12px;
+  gap: 40px;
+
+  @include sm {
+    gap: 20px;
+    justify-content: center
+  }
+
+  @include xx {
+    justify-content: flex-start;
+  }
+
+  &__photo {
+    display: flex;
+    align-items: center;
+
+
+    &-image {
+      height: auto;
+      width: 413px;
+
+
+      @include lg {
+        width: 300px;
+        height: fit-content;
+      }
+
+      @include md {
+        width: 250px;
+      }
+
+      @include sm {
+        display: none;
+      }
+    }
+  }
+
+  &__subheader {
+    margin-bottom: 5px;
+
+    @include sm {
+      text-align: center;
+    }
+
+    @include xx {
+      text-align: left;
+    }
+
+    &-link {
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: 1px;
+      color: $color-active;
+    }
+
+    &-link:hover {
+      opacity: 0.4;
+    }
+
+    &-arrow {
+      width: 12px;
+      height: 12px;
+
+    }
+  }
+
+  &__description {
+    padding: 40px 30px 20px 0px;
+
+    @include lg {
+      padding: 20px 20px 20px 0px;
+    }
+
+    &-quote {
+      @extend %text-liner-gradient;
+
+      font-weight: 700;
+      font-size: 42px;
+      line-height: 1.1;
+      margin: 0 0 20px;
+
+      @include xl-min {
+        max-width: 827px;
+      }
+
+      @include xl {
+        max-width: 550px;
+      }
+
+      @include lg {
+        font-size: 35px;
+        max-width: 400px;
+      }
+
+      @include md {
+        font-size: 28px;
+        max-width: 320px;
+        text-align: center;
+      }
+
+      @include sm {
+        max-width: 300px;
+      }
+
+      @include xx {
+        margin: 0 0 17px;
+        text-align: left;
+        max-width: 260px;
+      }
+    }
+  }
+
+  &__data {
+    display: grid;
+    grid-template-areas: "pht name" "pht pst";
+    justify-content: start;
+    align-items: center;
+
+    @include sm {
+      column-gap: 10px;
+    }
+
+    &-ava {
+      display: none;
+      grid-area: pht;
+
+      @include sm {
+        display: block;
+      }
+    }
+
+    &-name {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 1.2;
+      color: $color-text;
+      margin-bottom: 5px;
+      grid-area: name;
+
+      @include xl-min {
+        max-width: 825px;
+      }
+
+      @include xl {
+        max-width: 550px;
+      }
+
+      @include lg {
+
+        max-width: 400px;
+      }
+
+      @include md {
+
+        max-width: 320px;
+      }
+
+      @include sm {
+        font-size: 16px;
+        max-width: 300px;
+      }
+
+      @include xx {
+        max-width: 260px;
+      }
+
+    }
+
+    &-position {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.2;
+      color: $color-text;
+      grid-area: pst;
+      padding-bottom: 4px;
+
+      @include xl-min {
+        max-width: 825px;
+      }
+
+      @include xl {
+        max-width: 550px;
+      }
+
+      @include lg {
+
+        max-width: 400px;
+      }
+
+      @include md {
+
+        max-width: 320px;
+      }
+
+      @include sm {
+
+        max-width: 300px;
+      }
+
+      @include xx {
+        max-width: 260px;
+      }
+    }
+  }
+}

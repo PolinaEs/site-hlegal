@@ -1,0 +1,162 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.menu {
+  align-self: center;
+  font-size: 1.125rem;
+
+  &__btn {
+    position: relative;
+    width: 30px;
+    height: 22.5px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    transform: rotate(0deg);
+    margin-left: auto;
+
+    &-row {
+      left: 0;
+      display: none;
+      width: 100%;
+      height: 3px;
+      transition: 0.25s ease-in-out;
+      transform: rotate(0deg);
+      opacity: 1;
+
+      @include sm {
+        position: absolute;
+        display: block;
+      }
+
+      &:nth-child(1) {
+        top: 0;
+        background-color: $color-white;
+      }
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        top: 9px;
+        background-color: $color-white;
+      }
+
+      &:nth-child(4) {
+        top: 18px;
+        background-color: $color-white;
+      }
+    }
+
+    &.active span {
+
+
+      &:nth-child(1) {
+        top: 9px;
+        left: 50%;
+        width: 0;
+      }
+
+      &:nth-child(2) {
+        transform: rotate(45deg);
+      }
+
+      &:nth-child(3) {
+        transform: rotate(-45deg);
+      }
+
+      &:nth-child(4) {
+        top: 9px;
+        left: 50%;
+        width: 0;
+      }
+    }
+
+    &.active {
+
+      right: 90px;
+    }
+
+  }
+
+
+
+  &__list {
+    @include unlist;
+
+    @include sm-min {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 15px;
+      font-weight: 500;
+      font-size: 18px;
+    }
+
+    @include sm {
+      display: none;
+      position: absolute;
+      top: 0;
+      right: -$mobile-menu-size;
+      width: $mobile-menu-size;
+      height: 100vh;
+      padding: $gap;
+      background-color: $color-main-alt;
+      box-shadow: -10px 0 15px rgba($color-black, 0.12);
+      overflow: hidden;
+      animation: hide 2s;
+
+      &.active {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: -25px;
+        width: 160px;
+        height: 100vh;
+        padding: 20px;
+        background-color: $color-accent-dark;
+        box-shadow: -10px 0 15px rgba(0, 0, 0, 0.12);
+        overflow: hidden;
+        animation: slide 2s;
+      }
+
+    }
+  }
+
+  &__link {
+    display: block;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: right;
+
+
+    color: $color-white;
+
+    @include sm {
+      margin: $gap 0;
+    }
+  }
+
+  &__link:hover {
+    color: $color-accent;
+  }
+}
+
+// @keyframes slide {
+//   50% {
+//     right: -10px;
+//   }
+
+//   100% {
+//     right: -20px;
+//   }
+// }
+
+// @keyframes hide {
+//   50% {
+//     right: -15px;
+//   }
+
+//   100% {
+//     right: -240px;
+//   }
+// }
