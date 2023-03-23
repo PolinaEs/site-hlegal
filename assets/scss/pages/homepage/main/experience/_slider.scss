@@ -137,6 +137,7 @@ $size: 16px;
 
     @include xs {
       max-width: 450px;
+      margin-bottom: 40px;
     }
 
     @include xx {
@@ -220,6 +221,7 @@ $size: 16px;
 
     @include sm {
       max-width: 400px;
+
     }
 
     @include xs {

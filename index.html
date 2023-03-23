@@ -44,10 +44,10 @@
 
       <nav class="page-header__actions actions">
 
-        <div class="actions__languages" id="active-lang">
-          <span class="actions__language-link active" href="">УК</span>
-          <span class="actions__language-link" href="">РУ</span>
-          <span class="actions__language-link" href="">EN</span>
+        <div class="actions__languages">
+          <a class="actions__language-link active" href="">УК</a>
+          <a class="actions__language-link" href="">РУ</a>
+          <a class="actions__language-link" href="">EN</a>
         </div>
 
         <div class="dot"></div>
@@ -97,7 +97,7 @@
             <h2 class="slider__header active">Послідовні</h2>
             <h2 class="slider__header">Клієнтоорієнтовані</h2>
             <h2 class="slider__header">Інноваційні</h2>
-            <h2 class="slider__header">Бізнес-орієнтовані <br> юристи</h2>
+            <h2 class="slider__header">Бізнес-орієнтовані <br class="hide"> юристи</h2>
           </div>
 
           <div class="slider__notes">
@@ -230,7 +230,7 @@
     </section>
 
     <section class="team">
-
+      <h2 class="team__title visually-hidden">Наші юристи</h2>
       <div class="team__container">
 
         <div class="worker">
@@ -414,9 +414,7 @@
           <div class="content__blocks">
 
             <article class="block img-hide">
-              <!-- <div class="block__img">
-                <img class="block__img-pic" src="assets/img/home-page/publications/block-image1.png" alt="image">
-              </div> -->
+
               <div class="block__body">
                 <h4><a class="block__body-title" href="">Валютний контроль помер, хай живе валютний контроль!</a></h4>
                 <div class="block__body-date">14 червня</div>
@@ -486,6 +484,7 @@
             </article>
 
             <article class="block hide">
+              <h4 class="visually-hidden"><a class="block__body-title" href="">Дитячий розвиток</a></h4>
               <div class="block__img">
                 <img class="block__img-pic" src="assets/img/pubication-5.png" alt="image">
               </div>
@@ -531,9 +530,10 @@
 
   </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="assets/js/main.js"></script>
+
 </body>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-<script src="assets/js/main.js"></script>
 
 </html>
