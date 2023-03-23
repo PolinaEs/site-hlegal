@@ -1,0 +1,90 @@
+@use "../../../../presets" as *;
+@use "../../../../mixins" as *;
+
+.information {
+  padding-bottom: 93px;
+
+  @include xs {
+    padding-bottom: 40px;
+  }
+
+  &__container {
+    @extend %container;
+    display: flex;
+    justify-content: center;
+
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+
+
+    @include md {
+      flex-direction: column;
+    }
+
+    &-title {
+      @extend %text-liner-gradient;
+      font-size: 42px;
+      line-height: 50px;
+      margin-left: 40px;
+      margin-top: 0;
+      max-width: 414px;
+
+      @include md {
+
+        margin-top: 20px;
+        margin-left: 0;
+      }
+
+      @include sm {
+
+        font-size: 32px;
+        line-height: 38px;
+      }
+
+      @include xx {
+        max-width: 334px;
+      }
+
+      @include ux {
+        max-width: 250px;
+      }
+    }
+
+    &-description {
+      max-width: 640px;
+      font-size: 21px;
+      line-height: 30px;
+
+      @include lg {
+        max-width: 475px;
+      }
+
+      @include sm {
+
+        margin-bottom: 0;
+        font-size: 18px;
+        line-height: 26px;
+        margin-top: 0;
+      }
+
+      @include xs {
+        max-width: 430px;
+      }
+
+      @include xx {
+        max-width: 334px;
+      }
+
+      @include ux {
+        max-width: 250px;
+      }
+
+
+    }
+  }
+}

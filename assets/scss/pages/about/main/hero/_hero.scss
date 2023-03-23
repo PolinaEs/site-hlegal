@@ -1,0 +1,53 @@
+@use "../../../../presets" as *;
+@use "../../../../mixins" as *;
+
+.hero {
+  background-image: url(../img/about-photo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  max-width: 100%;
+  height: 438px;
+  margin-top: 100px;
+  margin-bottom: 80px;
+
+  @include sm {
+    margin-top: 35px;
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    font-size: 96px;
+    line-height: 113px;
+    text-align: center;
+    letter-spacing: 63px;
+    text-transform: uppercase;
+    color: $color-white;
+    opacity: 0.8;
+    text-shadow: 0px 15px 30px rgba(40, 40, 86, 0.8);
+    line-height: 438px;
+
+    @include lg {
+      font-size: 70px;
+      letter-spacing: 40px;
+      line-height: 338px;
+    }
+
+    @include md {
+      font-size: 45px;
+
+      letter-spacing: 20px;
+      line-height: 430px;
+
+    }
+
+    @include sm {
+      font-size: 36px;
+      line-height: 400px;
+    }
+
+    @include ux {
+      font-size: 30px;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+@use "../../../../presets" as *;
+@use "../../../../mixins" as *;
+
+.achievement {
+  display: flex;
+  column-gap: 40px;
+
+  @include md {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    row-gap: 20px;
+    column-gap: 20px;
+  }
+
+  @include xs {
+    flex-wrap: nowrap;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 109px;
+    border-radius: 12px;
+    background-color: $color-white;
+
+    &:hover {
+      box-shadow: 0px 0px 24px $color-card-shadow2;
+    }
+
+    @include md {
+      width: 200px;
+      height: 90px;
+    }
+
+    @include xs {
+      width: 157px;
+      height: 57px;
+
+    }
+
+    &--img {
+
+      @include xs {
+        width: 40%;
+      }
+
+    }
+  }
+}

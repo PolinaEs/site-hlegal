@@ -22,6 +22,12 @@
   }
 }
 
+.show-after {
+  @include xs-min {
+    display: none;
+  }
+}
+
 
 .line {
   width: 100%;

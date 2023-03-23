@@ -1,7 +1,7 @@
 @use "../../../presets" as *;
 @use "../../../mixins" as *;
 
-.menu {
+.about-menu {
   align-self: center;
 
   &__btn {
@@ -33,7 +33,7 @@
 
       opacity: 1;
       border-radius: 3px;
-      background: $color-white;
+      background: $color-main;
 
       &:nth-child(1) {
         top: 0;
@@ -98,7 +98,7 @@
 
       text-align: center;
 
-      background-color: rgba($color-main, 0.9);
+      background-color: rgba($color-white, 0.9);
       box-shadow: 1px 3px 10px rgba($color-black, 0.5);
     }
   }
@@ -106,7 +106,7 @@
   &__link {
     display: block;
 
-    color: $color-white;
+    color: $color-active;
 
     @include sm-min {
       padding: 0.25em 0;
@@ -118,6 +118,7 @@
 
     &.active {
       color: $color-accent;
+      border-bottom: 2px solid #F0145A;
     }
 
     &:hover {
