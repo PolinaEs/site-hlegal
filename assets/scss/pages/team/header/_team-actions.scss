@@ -1,0 +1,98 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.team-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  @include sm-min {
+    justify-content: flex-end;
+  }
+
+
+  @include sm {
+    justify-content: space-between;
+
+  }
+
+  &__languages {
+    display: flex;
+    gap: 2px;
+
+
+  }
+
+  &__language-link {
+    display: block;
+    padding: 5px 6px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 1px;
+    color: $color-text;
+    cursor: pointer;
+
+    &.active {
+      background-color: $color-accent;
+      color: $color-white;
+      transition: all 0.3s ease;
+    }
+  }
+
+  &__language-link:hover {
+    background-color: $color-accent;
+    color: $color-white;
+  }
+
+  &__locations {
+
+    @include lg {
+      display: none;
+    }
+  }
+
+  &__locations-link {
+
+    font-size: 16px;
+    line-height: 19px;
+
+    color: $color-text;
+  }
+
+  &__locations-link:hover {
+    color: $color-accent;
+  }
+
+  &__phone-link {
+    color: $color-text;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    white-space: nowrap;
+
+  }
+
+  &__phone-link:hover {
+    color: $color-accent;
+
+  }
+
+  &__socials {
+    @include sm {
+      display: none;
+    }
+  }
+
+  &__socials-image {
+    border: 2px solid transparent;
+    margin: 0;
+  }
+
+  &__socials-image:hover {
+    border: 2px solid $color-accent;
+    border-radius: 50%;
+
+  }
+}

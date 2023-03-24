@@ -1,0 +1,92 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.member {
+  flex-grow: 1;
+  max-width: 413px;
+  display: flex;
+  flex-direction: column;
+
+  @include xs {
+    flex-direction: row;
+    column-gap: 18px;
+    align-items: center;
+  }
+
+  &__photo {
+    max-width: 413px;
+    height: auto;
+    display: flex;
+
+    @include xs {
+      max-width: 158px;
+    }
+
+    &-ava {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__description {
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: auto 32px;
+    grid-template-areas: "nme btn" "pst btn";
+    align-items: center;
+    row-gap: 5px;
+    max-width: 413px;
+
+    @include xs {
+      grid-template-columns: 1fr;
+      grid-template-areas: "nme" "pst" "btn";
+      align-items: end;
+      row-gap: 2px;
+      padding-top: 80px;
+      max-width: 170px;
+    }
+
+    &-name {
+      grid-area: nme;
+      max-width: 350px;
+
+      @include xs {
+        max-width: 170px;
+      }
+    }
+
+    &-link {
+      font-weight: 500;
+      font-size: 18px;
+      color: $color-main;
+      margin: 0;
+      line-height: 21px;
+    }
+
+    &-link:hover {
+      color: $color-accent;
+    }
+
+    &-position {
+      font-size: 16px;
+      color: $color-text;
+      grid-area: pst;
+      margin: 0;
+      max-width: 350px;
+
+      @include xs {
+        max-width: 170px;
+      }
+    }
+
+    &-button {
+      height: 32px;
+      width: 32px;
+      grid-area: btn;
+    }
+
+    &-button:hover {
+      opacity: 0.5;
+    }
+  }
+}
