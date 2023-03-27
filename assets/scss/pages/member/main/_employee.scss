@@ -1,0 +1,37 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.employee {
+
+  @extend %container;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  justify-content: center;
+  margin-bottom: 80px;
+
+  @include xl {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 65px;
+  }
+
+
+  @include sm {
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+
+  &__photo {
+
+
+    &-img {
+      @include sm {
+        max-width: 335px;
+      }
+    }
+
+  }
+}

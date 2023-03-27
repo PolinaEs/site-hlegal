@@ -1,0 +1,53 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.biography {
+  max-width: 641px;
+
+  &__text {
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    max-width: 641px;
+    color: $color-black;
+
+
+    @include md {
+      max-width: 550px;
+    }
+
+    @include sm {
+      max-width: 335px;
+    }
+
+    @include ux {
+      max-width: 250px;
+    }
+  }
+
+
+  &__title {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $color-main;
+
+    @include md {
+      max-width: 550px;
+    }
+
+    @include sm {
+      max-width: 335px;
+      margin-top: 20px;
+    }
+
+    @include ux {
+      max-width: 250px;
+    }
+
+  }
+}

@@ -1,0 +1,104 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.member-footer {
+  background-color: $color-bg;
+
+  &__container {
+    @extend %container;
+
+  }
+
+  &__content {
+    padding-top: 32px;
+    padding-bottom: 35px;
+    display: flex;
+    justify-content: space-between;
+
+    @include sm {
+      flex-direction: column;
+      gap: 5px;
+      padding-bottom: 118px;
+      padding-top: 20px;
+      align-items: center;
+    }
+
+    &-info {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 18px;
+      row-gap: 22px;
+      flex-basis: 460px;
+      align-items: center;
+
+      @include sm {
+        flex-basis: 200px;
+        flex-direction: column;
+        row-gap: 18px;
+      }
+    }
+
+    &-address {
+      font-weight: 500;
+      font-size: 16px;
+      color: $color-main;
+      max-width: 250px;
+    }
+
+    &-link {
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 14px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: $color-active;
+    }
+
+    &-link:hover {
+      color: $color-accent;
+    }
+
+    &-social {
+      font-size: 38px;
+      color: $color-active;
+      margin: 0;
+    }
+
+    &-social:hover {
+      color: $color-accent;
+    }
+
+    &-phone {
+      font-weight: 700;
+      font-size: 16px;
+      color: $color-main-alt;
+    }
+
+    &-phone:hover {
+      color: $color-accent;
+    }
+
+    &-email {
+      font-weight: 700;
+      font-size: 16px;
+      color: $color-active;
+    }
+
+    &-email:hover {
+      color: $color-accent;
+    }
+
+    &-copyright {
+      font-weight: 500;
+      font-size: 16px;
+      color: $color-text;
+      text-align: right;
+      max-width: 340px;
+
+      @include sm {
+        max-width: 335px;
+        text-align: center;
+      }
+    }
+  }
+}
