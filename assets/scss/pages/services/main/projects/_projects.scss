@@ -1,0 +1,14 @@
+@use "../../../../presets" as *;
+@use "../../../../mixins" as *;
+
+.projects {
+  @extend %container;
+  background-color: $color-bg;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-top: 60px;
+
+  @include sm {
+    margin-top: 42px;
+  }
+}
