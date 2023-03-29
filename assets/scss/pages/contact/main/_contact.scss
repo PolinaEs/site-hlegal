@@ -1,0 +1,92 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 414px;
+  margin-top: 27px;
+
+  @include sm {
+    max-width: 319px;
+    margin-top: 0;
+  }
+
+  @include ux {
+    width: 280px;
+  }
+
+  &__address {
+
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 30px;
+    color: $color-main;
+    max-width: 414px;
+    margin-bottom: 20px;
+
+    @include sm {
+      max-width: 319px;
+    }
+
+    @include ux {
+      max-width: 280px;
+    }
+  }
+
+  &__phone {
+    margin-top: 40px;
+    font-size: 21px;
+    line-height: 30px;
+    color: $color-main-alt;
+    margin-bottom: 20px;
+    max-width: 414px;
+
+    @include sm {
+      max-width: 319px;
+    }
+
+    @include ux {
+      max-width: 280px;
+    }
+  }
+
+
+  &__email {
+    margin-bottom: 40px;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 30px;
+    color: $color-active;
+    max-width: 414px;
+
+    @include sm {
+      max-width: 319px;
+    }
+
+    @include ux {
+      max-width: 280px;
+    }
+  }
+
+
+  &__social {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+
+    &--text {
+
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      max-width: 116px;
+      color: $color-active;
+    }
+  }
+}

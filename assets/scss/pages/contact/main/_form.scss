@@ -1,0 +1,152 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.form {
+  display: flex;
+  flex-direction: column;
+
+  width: 527px;
+
+  background-color: $color-bg;
+  border-radius: 12px;
+  padding: 20px;
+
+  @include sm {
+    width: 360px;
+
+  }
+
+  @include xx {
+    border-radius: 0;
+  }
+
+  @include ux {
+    width: 300px;
+  }
+
+  &__title {
+    font-size: 32px;
+    line-height: 38px;
+    @extend %text-liner-gradient;
+    margin: 0;
+
+    @include sm {
+      font-size: 22px;
+      line-height: 26px;
+    }
+  }
+
+  &__reply {
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 20px;
+    color: $color-text;
+    margin-bottom: 0;
+  }
+
+  &__input {
+
+    &--name {
+      border-radius: 8px;
+      padding: 10px;
+      margin-top: 20px;
+      border: 1px solid $color-white;
+      outline: none;
+
+
+      &::placeholder {
+        color: $color-text ;
+        font-size: 18px;
+        line-height: 26px;
+      }
+    }
+
+    &--message {
+      border-radius: 8px;
+      border: 1px solid $color-white;
+      padding: 10px 0 140px 10px;
+      outline: none;
+      margin-top: 20px;
+
+      &::placeholder {
+        color: $color-text ;
+        font-size: 18px;
+        line-height: 26px;
+      }
+    }
+
+    &--number {
+      border-radius: 8px;
+      outline: none;
+      border: 1px solid $color-white;
+      padding: 10px;
+      margin-top: 10px;
+
+      @include sm {
+        margin-top: 22px;
+      }
+
+      &::placeholder {
+        color: $color-text ;
+        font-size: 18px;
+        line-height: 26px;
+      }
+    }
+
+    &--email {
+      margin-top: 20px;
+      border-radius: 8px;
+      outline: none;
+      border: 1px solid $color-white;
+      padding: 10px;
+
+      @include sm {
+        margin-top: 8px;
+      }
+
+      &::placeholder {
+        color: $color-text ;
+        font-size: 18px;
+        line-height: 26px;
+      }
+    }
+
+
+  }
+
+  &__btn {
+
+    position: relative;
+    z-index: 2;
+    transform: translateX(50%);
+    margin-top: 20px;
+
+    background: $color-active;
+    box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
+    border-radius: 12px;
+    border: none;
+    color: $color-white;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    padding: 16px 16px;
+    width: 250px;
+    cursor: pointer;
+
+    @include sm {
+      transform: translateX(17%);
+    }
+
+    @include ux {
+      transform: translateX(2%);
+    }
+
+    &:hover {
+      background: $color-active-hover;
+    }
+
+  }
+}
