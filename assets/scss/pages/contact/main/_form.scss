@@ -61,6 +61,11 @@
         font-size: 18px;
         line-height: 26px;
       }
+
+
+      &:hover {
+        box-shadow: 0px 0px 24px $color-card-shadow2;
+      }
     }
 
     &--message {
@@ -74,6 +79,10 @@
         color: $color-text ;
         font-size: 18px;
         line-height: 26px;
+      }
+
+      &:hover {
+        box-shadow: 0px 0px 24px $color-card-shadow2;
       }
     }
 
@@ -93,6 +102,10 @@
         font-size: 18px;
         line-height: 26px;
       }
+
+      &:hover {
+        box-shadow: 0px 0px 24px $color-card-shadow2;
+      }
     }
 
     &--email {
@@ -110,6 +123,10 @@
         color: $color-text ;
         font-size: 18px;
         line-height: 26px;
+      }
+
+      &:hover {
+        box-shadow: 0px 0px 24px $color-card-shadow2;
       }
     }
 

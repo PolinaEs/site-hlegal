@@ -44,6 +44,10 @@
     margin-bottom: 20px;
     max-width: 414px;
 
+    &:hover {
+      color: $color-accent;
+    }
+
     @include sm {
       max-width: 319px;
     }
@@ -61,6 +65,10 @@
     line-height: 30px;
     color: $color-active;
     max-width: 414px;
+
+    &:hover {
+      color: $color-accent;
+    }
 
     @include sm {
       max-width: 319px;
@@ -87,6 +95,11 @@
       text-transform: uppercase;
       max-width: 116px;
       color: $color-active;
+
+      &:hover {
+        color: $color-accent;
+      }
+
     }
   }
 }

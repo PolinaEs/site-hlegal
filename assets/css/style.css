@@ -3284,6 +3284,9 @@ h4 {
   font-size: 21px;
   line-height: 30px;
 }
+.contact__phone:hover {
+  color: #f0145a;
+}
 .contact__email {
   max-width: 414px;
   margin-bottom: 40px;
@@ -3293,6 +3296,9 @@ h4 {
   font-size: 21px;
   font-weight: 400;
   line-height: 30px;
+}
+.contact__email:hover {
+  color: #f0145a;
 }
 .contact__social {
   display: -webkit-box;
@@ -3320,6 +3326,9 @@ h4 {
 
   font-size: 12px;
   line-height: 16px;
+}
+.contact__social--text:hover {
+  color: #f0145a;
 }
 
 .form {
@@ -3393,6 +3402,10 @@ h4 {
   font-size: 18px;
   line-height: 26px;
 }
+.form__input--name:hover {
+  -webkit-box-shadow: 0 0 24px #cacadb;
+          box-shadow: 0 0 24px #cacadb;
+}
 .form__input--message {
   margin-top: 20px;
   padding: 10px 0 140px 10px;
@@ -3430,6 +3443,10 @@ h4 {
 
   font-size: 18px;
   line-height: 26px;
+}
+.form__input--message:hover {
+  -webkit-box-shadow: 0 0 24px #cacadb;
+          box-shadow: 0 0 24px #cacadb;
 }
 .form__input--number {
   margin-top: 10px;
@@ -3469,6 +3486,10 @@ h4 {
   font-size: 18px;
   line-height: 26px;
 }
+.form__input--number:hover {
+  -webkit-box-shadow: 0 0 24px #cacadb;
+          box-shadow: 0 0 24px #cacadb;
+}
 .form__input--email {
   margin-top: 20px;
   padding: 10px;
@@ -3506,6 +3527,10 @@ h4 {
 
   font-size: 18px;
   line-height: 26px;
+}
+.form__input--email:hover {
+  -webkit-box-shadow: 0 0 24px #cacadb;
+          box-shadow: 0 0 24px #cacadb;
 }
 .form__btn {
   position: relative;
